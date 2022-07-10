@@ -263,6 +263,7 @@ $Computers_Window.Add_Closing({
 $Menu_Exit.add_Click({
 	$Main_Tool_Icon.Visible = $false
 	$window.Close()
+	$appContext.ExitThread()
 	Stop-Process $pid
  })
 
@@ -275,6 +276,7 @@ $Menu_Restart_Tool.add_Click({
 
 	$Main_Tool_Icon.Visible = $false
 	$window.Close()
+	$appContext.ExitThread()
 	Stop-Process $pid	
  })
  
